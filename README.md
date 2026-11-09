@@ -1,3 +1,57 @@
+# Distributed Rock-Paper-Scissors Game
+
+A networked multiplayer Rock-Paper-Scissors game built in Java, where two
+players can play against each other in real time over a network connection.
+
+## What it does
+
+- Real-time peer-to-peer gameplay over TCP/IP sockets
+- A multi-threaded server that handles concurrent player connections without
+  freezing the UI
+- A Swing/AWT interface designed with WCAG accessibility guidelines in mind
+- A privacy-policy workflow with persistent user-agreement storage
+
+## Tech stack
+
+- Language: Java
+- UI: Java Swing, AWT
+- Networking: TCP/IP sockets, Java Networking API
+- Concurrency: Java threading (dedicated network listener + UI threads)
+- Tools: Eclipse, Git, GitHub
+
+## Why this project exists
+
+I built this to move beyond standard desktop apps and actually learn how
+distributed systems work — how two processes connect over a network, how to
+manage socket connections for simultaneous players, and how to keep a UI
+responsive while network operations run in the background. The hardest part was
+getting the threading right so the game stayed responsive during network
+communication.
+
+## Project structure
+
+The project is organized into four packages:
+
+- `controller/` — game logic and event handling
+- `model/` — game state and data
+- `utils/` — TCP/IP networking logic
+- `view/` — Swing/AWT graphical interface
+
+
+## Getting started
+
+Prerequisites: JDK 17+
+
+```bash
+git clone <your-repo-url>
+cd <repo-folder>
+# Compile
+javac -d out $(find src -name "*.java")
+# Run (server instance)
+java -cp out com.aldiyar.rockpaperscissors.view.Main
+
+```
+<!--
 # 🎮 Distributed Rock-Paper-Scissors
 
 ## 📋 Project Overview
@@ -46,4 +100,4 @@ The objective was to build a low-latency, multi-threaded gaming environment wher
 - 💼 Aldiyar Baibogurov
 - 📧 abaibogurov@gmail.com
 - 🔗 [LinkedIn](https://www.linkedin.com/in/aldiyar-baibogurov/)
-
+!-->
